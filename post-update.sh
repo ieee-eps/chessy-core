@@ -8,3 +8,5 @@ function echom() {
 
 chmod a+x ./update.sh
 chmod a+x ./run.sh
+
+npm install electron

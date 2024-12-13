@@ -26,7 +26,10 @@ else
     echom "${BG_BRIGHT_RED}${FG_BRIGHT_WHITE} ! ${COLOR_RESET}${FG_BRIGHT_RED} Les version ne sont pas compatibles ! Le git est-il correcte ?"
   else
     echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_WHITE} Version actuelle : (${FG_BRIGHT_CYAN}${version_local:0:7}${FG_BRIGHT_WHITE})"
+    echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_WHITE} Post-installation ..."
+    chmod a+x ./post-update.sh
+    chmod a+x ./update.sh
+    . ./post-update.sh
+    echom "${BG_BRIGHT_GREEN}${FG_BRIGHT_WHITE} O ${COLOR_RESET}${FG_BRIGHT_WHITE} Terminé !"
   fi
 fi
-
-chmod u+x ./update.sh
