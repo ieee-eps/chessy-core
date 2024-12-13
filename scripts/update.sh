@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source colors.sh
+source script/colors.sh
 
 remote="https://github.com/ieee-eps/chessy-system"
 
