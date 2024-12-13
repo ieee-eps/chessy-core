@@ -30,3 +30,5 @@ else
     echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_WHITE} Version actuelle : (${FG_BRIGHT_CYAN}${version_local:0:7}${FG_BRIGHT_WHITE})"
   fi
 fi
+
+chmod u+x ./update.sh
