@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source script/colors.sh
+source scripts/colors.sh
 
 function echom() {
   echo -e "\033[0m$*\033[0m"
@@ -9,4 +9,4 @@ function echom() {
 chmod a+x ./update.sh
 chmod a+x ./run.sh
 
-npm install electron
+npm install
