@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url("../fonts/montserrat.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    src: url("../fonts/montserrat-italic.ttf") format("truetype");
+}

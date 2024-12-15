@@ -1,0 +1,108 @@
+@import "fonts.css";
+
+#screen {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 480px;
+    background-color: #242425;
+    overflow: hidden;
+    font-family: Montserrat, sans-serif;
+    color: white;
+}
+
+#screen > .view {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+    width: 800px;
+    height: 480px;
+    align-items: center;
+    justify-content: center;
+}
+
+#screen > .view.visible {
+    display: flex;
+    opacity: 1;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes delayedFade {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#home_view > .title {
+    opacity: 1;
+    animation-fill-mode: forwards;
+    font-size: 90px;
+    letter-spacing: .2em;
+    font-weight: bold;
+}
+
+#home_view.visible > .title {
+    animation: fade 0.5s linear;
+}
+
+/*
+==================== BUTTONS ====================
+ */
+
+.ui-buttons {
+    opacity: 1;
+    animation-fill-mode: forwards;
+    animation: delayedFade 2s linear;
+    display: flex;
+    align-items: end;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    width: 57.2vw;
+    justify-content: space-between;
+}
+
+.ui-buttons .button::after {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    content: " ";
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    bottom: -20px;
+    left: -23px;
+}
+
+.ui-buttons .button {
+    z-index: 99;
+    width: 0;
+    position: relative;
+}
+
+.ui-buttons .button span {
+    display: block;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    left: -50px;
+}
