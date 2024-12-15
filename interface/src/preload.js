@@ -1,2 +1,14 @@
-// See the Electron documentation for details on how to use preload scripts:
-// https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
+const { contextBridge, ipcRenderer  } = require('electron')
+
+contextBridge.exposeInMainWorld('chessy', {
+    awaitButton: () => function() {
+        return new Promise((resolve, reject) => {
+            ipcRenderer.emit("awaitButton")
+
+            ipcRenderer.once("awaitButtonResponse", (data) => {
+                resolve(data)
+            })
+        })
+    }
+})
+
