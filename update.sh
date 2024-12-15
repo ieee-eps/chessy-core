@@ -19,6 +19,8 @@ else
   echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_WHITE} Une nouvelle version a été trouvée !"
   echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_RED} ${version_local:0:7}${FG_BRIGHT_WHITE} -> ${FG_BRIGHT_GREEN}${version_remote:0:7}"
   echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_WHITE} Version actuelle : (${FG_BRIGHT_CYAN}${version_local:0:7}${FG_BRIGHT_WHITE})"
+  echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_WHITE} Arrêt des applications"
+  killall electron
   echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} I ${COLOR_RESET}${FG_BRIGHT_WHITE} Pull ..."
   git pull
   version_local=$(git rev-parse HEAD)
