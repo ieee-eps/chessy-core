@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 function run_s() {
   export DISPLAY=:0
