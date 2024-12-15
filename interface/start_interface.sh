@@ -1,3 +1,3 @@
 export DISPLAY=:0
 xhost +
-npx electron ./src/index.js
+npx electron ./interface/src/index.js
