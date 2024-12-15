@@ -8,5 +8,8 @@ function echom() {
 
 chmod a+x ./update.sh
 chmod a+x ./run.sh
+chmod a+x ./interface/start_interface.sh
 
-npm install
+echom "${BG_BRIGHT_BLUE}${FG_BRIGHT_WHITE} ... ${COLOR_RESET} ${FG_BRIGHT_WHITE}Démarrage ..."
+
+./run.sh
